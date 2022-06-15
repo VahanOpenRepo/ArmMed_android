@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patients"
+    app:startDestination="@id/patientsFragment">
+
+    <include app:graph="@navigation/nav_authorization" />
+
+    <fragment
+        android:id="@+id/patientsFragment"
+        android:name="com.armed.am.patients.presentation.PatientsFragment"
+        android:label="PatientsFragment"
+        tools:layout="@layout/fragment_patients">
+        <action
+            android:id="@+id/action_patientsFragment_to_patientDetailsFragment"
+            app:destination="@id/patientDetailsFragment" />
+        <action
+            android:id="@+id/action_patientsFragment_to_searchTypesFragment"
+            app:destination="@id/searchTypesFragment" />
+        <action
+            android:id="@+id/action_patientsFragment_to_addVisitFragment"
+            app:destination="@id/addVisitFragment" />
+        <action
+            android:id="@+id/action_patientsFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_nav_graph_authorization"
+        app:destination="@id/authorization" />
+    <fragment
+        android:id="@+id/patientDetailsFragment"
+        android:name="com.armed.am.patients.presentation.PatientDetailsFragment"
+        android:label="PatientDetailsFragment"
+        tools:layout="@layout/fragment_patients_details">
+        <argument
+            android:name="patientUiModel"
+            app:argType="com.armed.am.patients.network.model.PatientUIModel" />
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_surveyFragment"
+            app:destination="@id/surveyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/surveyFragment"
+        android:name="com.armed.am.survey.presentation.SurveyFragment"
+        android:label="SurveyFragment"
+        tools:layout="@layout/fragment_survey">
+        <argument
+            android:name="genderCode"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchTypesFragment"
+        android:name="com.armed.am.patients.search.SearchTypesFragment"
+        android:label="SearchTypesFragment"
+        tools:layout="@layout/fragment_search_types">
+        <action
+            android:id="@+id/action_searchTypesFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <argument
+            android:name="isFromAddVisit"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.armed.am.patients.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <argument
+            android:name="searchType"
+            app:argType="com.armed.am.patients.search.SearchTypesEnum" />
+        <action
+            android:id="@+id/action_searchFragment_to_patientsFragment"
+            app:destination="@id/patientsFragment" />
+        <argument
+            android:name="isFromAddVisit"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_searchFragment_to_addVisitFragment"
+            app:destination="@id/addVisitFragment" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_add_visit"
+        android:id="@+id/addVisitFragment"
+        android:name="com.armed.am.patients.presentation.AddVisitFragment"
+        android:label="AddVisitFragment">
+        <action
+            android:id="@+id/action_addVisitFragment_to_searchTypesFragment"
+            app:destination="@id/searchTypesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.armed.am.patients.filter.FilterFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/fragment_filter">
+        <action
+            android:id="@+id/action_filterFragment_to_patientsFragment"
+            app:destination="@id/patientsFragment" />
+    </fragment>
+
+</navigation>

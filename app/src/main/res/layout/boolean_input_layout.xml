@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/question_tv"
+        style="@style/TextView.BlackLight.Regular.Size16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Արդյո՞ք հիվանդի մոտ հայտնաբերվել է թոքաբորբ" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/no_btn"
+        style="@style/blue_outlined_button_style"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/big_button_height"
+        android:layout_marginStart="@dimen/standard_margin_16"
+        android:layout_marginTop="35dp"
+        android:text="@string/no"
+        app:layout_constraintEnd_toStartOf="@id/yes_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/yes_btn"
+        style="@style/pink_blue_gradient_filled_big_button_style"
+        android:layout_width="0dp"
+        android:text="@string/yes"
+        app:layout_constraintBottom_toBottomOf="@id/no_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/no_btn"
+        app:layout_constraintTop_toTopOf="@id/no_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

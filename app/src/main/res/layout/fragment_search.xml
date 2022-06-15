@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:id="@+id/nameTextField"
+        style="@style/MaterialInputStyle"
+        android:theme="@style/MaterialInputTheme"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/standard_margin_16"
+        android:layout_marginTop="53dp"
+        android:hint="@string/name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTextField"
+        android:id="@+id/surnameTextField"
+        style="@style/MaterialInputStyle"
+        android:theme="@style/MaterialInputTheme"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/standard_margin_16"
+        android:layout_marginTop="8dp"
+        android:hint="@string/surname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surnameTextField"
+        android:id="@+id/birthDateTextField"
+        style="@style/MaterialInputStyle"
+        android:theme="@style/MaterialInputTheme"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/standard_margin_16"
+        android:layout_marginTop="8dp"
+        android:hint="@string/birthDate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:id="@+id/birthDateTextField_wrapper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/birthDateTextField"
+        app:layout_constraintEnd_toEndOf="@id/birthDateTextField"
+        app:layout_constraintStart_toStartOf="@id/birthDateTextField"
+        app:layout_constraintTop_toTopOf="@id/birthDateTextField" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birthDateTextField"
+        android:id="@+id/socialCardDateTextField"
+        style="@style/MaterialInputStyle"
+        android:theme="@style/MaterialInputTheme"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/standard_margin_16"
+        app:layout_goneMarginTop="53dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/soc_card_or_passport_serial_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/search_btn"
+        style="@style/pink_blue_gradient_filled_big_button_style"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="42dp"
+        android:text="@string/search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

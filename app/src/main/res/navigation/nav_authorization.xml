@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authorization"
+    app:startDestination="@id/loginWithQR">
+
+
+    <fragment
+        android:id="@+id/loginWithQR"
+        android:name="com.armed.am.authorization.presentation.LoginWithQRFragment"
+        android:label="ScanQRFragment"
+        tools:layout="@layout/fragment_login_with_qr">
+
+        <argument
+            android:name="hideBottomNavBar"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_loginWithQR_to_scanQRFragment"
+            app:destination="@id/scanQRFragment" />
+        <action
+            android:id="@+id/action_loginWithQR_to_termsOfUseFragment"
+            app:destination="@id/termsOfUseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanQRFragment"
+        android:name="com.armed.am.authorization.presentation.ScanQRFragment"
+        android:label="ScanQRFragment"
+        tools:layout="@layout/fragment_scan_qr">
+        <argument
+            android:name="hideBottomNavBar"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsOfUseFragment"
+        android:name="com.armed.am.authorization.presentation.TermsOfUseFragment"
+        android:label="TermsOfUseFragment"
+        tools:layout="@layout/fragment_terms_of_use">
+        <argument
+            android:name="hideBottomNavBar"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+</navigation>

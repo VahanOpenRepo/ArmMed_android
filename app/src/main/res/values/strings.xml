@@ -1,0 +1,189 @@
+<resources>
+
+    <string name="app_name">ARMED</string>
+    <string name="qr_code">QR-կոդ</string>
+    <string name="qr_body_text">Հավելված մուտք գործելու համար \nսքանավորեք “Արմեդ” համակարգի Ձեր \nանձնական էջում առկա QR-կոդը</string>
+    <string name="scan">ՍԿԱՆԱՎՈՐԵԼ</string>
+    <string name="info_undp">Բջջային հավելվածը ստեղծվել է ՄԱԿ-ի զարգացման ծրագրի ֆինանսական աջակցությամբ։</string>
+    <string name="terms_of_use">Օգտագործման պայմաններ</string>
+    <string name="terms_of_use_header">Armed eHealth բջջային հավելվածի օգտագործման կանոններ եվ գաղտնիության քաղաքականություն</string>
+    <string name="terms_of_use_part_1">Սույն փաստաթուղթը սահմանում է ARMED eHealth բջջային հավելվածի (այսուհետ՝ Հավելված) օգտագործման կանոնները և տվյալների գաղտնիության քաղաքականությունը։ Սույն փաստաթուղթը (ներառյալ դրա հետագա փոփոխությունները և լրացումները) համարվում է Ձեր և SYLEX SA ընկերության (այսուհետ՝ Մատակարար) միջև կնքված պայմանագիր և գործում է այնքան ժամանակ, քանի դեռ Դուք օգտագործում եք Հավելվածը։ Սույն փաստաթղթով սահմանվում են նաև Հավելվածի միջոցով Ձեզ տրամադրվող ծառայությունների մատուցման Ընդհանուր պայմանները։</string>
+    <string name="terms_of_use_part_2">Սույն հավելվածում արտահայտված կարծիքները պատկանում են հեղինակ(ներ)ին և պարտադիր չէ, որ համընկնեն ՄԱԶԾ-ի տեսակետների հետ։</string>
+    <string name="terms">Պայմաններ</string>
+
+    <!-- Permission Dialog -->
+<string name="ask_camera_permission_text">Ակտիվացրեք տեսախցիկը` QR-ը սկանավորելու համար</string>
+<string name="camera_permission_title">CAMERA</string>
+
+    <!-- Error Dialog -->
+    <string name="button_ok">Լավ</string>
+    <string name="button_cancel">Չեղարկել</string>
+    <string name="patients">Հիվանդներ</string>
+    <string name="notifications">Ծանուցումներ</string>
+    <string name="profile">Հաշիվ</string>
+    <string name="more">Ավելին</string>
+
+    <!-- Patients Page -->
+    <string name="patient_list_title">Հիվանդներ</string>
+    <string name="search">Որոնել</string>
+    <string name="filter">Ֆիլտրել</string>
+    <string name="birthday_date">Ծննդ. ամսաթիվ</string>
+    <string name="type">Տեսակ</string>
+    <string name="log_out">Log Out</string>
+    <string name="back">հետ</string>
+    <string name="phone_number">Հեռ. Համար</string>
+    <string name="email">Էլ. հասցե</string>
+    <string name="passport">Անձնագիր</string>
+    <string name="address">Հասցե</string>
+    <string name="start">Սկսել Հարցաշարը</string>
+    <string name="last_update">Վերջին թարմացում</string>
+    <string name="social_group">Սոցխումբ</string>
+    <string name="social_card">ՀԾՀ</string>
+    <string name="case_type">Դեպքի տեսակ</string>
+    <string name="diagnose">Ախտորոշում</string>
+    <string name="by_name_surname">Անուն Ազգանունի</string>
+    <string name="by_name_surname_birthdate">Անուն Ազգանունի և Ծնն. տարեթվի</string>
+    <string name="by_social_card_or_passport">Սոց. քարտի կամ անձնագրի</string>
+    <string name="search_by">Որոնել Ըստ</string>
+    <string name="name">Անուն</string>
+    <string name="surname">Ազգանուն</string>
+    <string name="birthDate">Ծննդյան տարեթիվ</string>
+    <string name="soc_card_or_passport_serial_number">Սոց. քարտի կամ անձնագրի սերիա</string>
+    <string name="results">Արդյունքներ</string>
+    <string name="connection_interruption">Կապի Ընդհատում</string>
+    <string name="please_refresh">Գործողությունն ընդհատվել է։ \nԽնդրում ենք թարմացնել</string>
+    <string name="refresh">Թարմացնել</string>
+    <string name="medical_institution">Բժշկական հաստատություն</string>
+    <string name="filter_by">Ֆիլտրել Ըստ</string>
+
+    <!-- Survey Page -->
+    <string name="no">ՈՉ</string>
+    <string name="yes">ԱՅՈ</string>
+    <string name="forward">ԱՌԱՋ</string>
+    <string name="min_max">Մին. %1$.2f   մաքս.%2$.2f</string>
+    <string name="please_fill_valid_values">Խնդրում ենք լրացնել վավեր տվյալներ</string>
+    <string name="please_fill_in_all_fields">Խնդրում ենք լրացնել բոլոր դաշտերը</string>
+    <string name="date">Ամսաթիվ</string>
+    <string name="time">Ժամ</string>
+    <string name="no_results_found">Արդյունքներ չեն գտնվել</string>
+    <string name="generic_error_message">Something went wrong</string>
+
+    <!-- AddVisit Page -->
+    <string name="visit_type">Այցի տիպը <font color='#FF0000'>*</font></string>
+    <string name="reason_of_the_visit">Այցի պատճառը <font color='#FF0000'>*</font></string>
+    <string name="visit_mode">Այցի տեսակը <font color='#FF0000'>*</font></string>
+    <string name="source_of_financing">Ֆինանսավորման աղբյուրը <font color='#FF0000'>*</font></string>
+    <string name="issue_type">Դեպքի տիպը <font color='#FF0000'>*</font></string>
+    <string name="issue_case_type">Դեպքի տեսակը <font color='#FF0000'>*</font></string>
+    <string name="patient_social_card">Պացիենտի ՀԾՀ-ն <font color='#FF0000'>*</font></string>
+    <string name="patient_mobile_number">Պացիենտի բջջ. հեռախոսահամարը <font color='#FF0000'>*</font></string>
+    <string name="patient_name">Պացիենտի անունը</string>
+    <string name="patient_surname">Պացիենտի ազգանունը</string>
+    <string name="patient_email">Պացիենտի էլ. փոստի հասցեն</string>
+    <string name="health_issue_case_number">Դեպքի համարը <font color='#FF0000'>*</font></string>
+    <string name="visit_start">Այցի սկիզբը <font color='#FF0000'>*</font></string>
+    <string name="visit_end">Այցի ավարտը <font color='#FF0000'>*</font></string>
+    <string name="health_issue_start">Դեպքի սկիզբը <font color='#FF0000'>*</font></string>
+    <string name="please_fill_in_all_required_fields">Խնդրում ենք լրացնել բոլոր պարտադիր դաշտերը</string>
+    <string name="visit_end_can_not_be_earlier_than_visit_start">Այցի ավարտը չի կարող լինել ավելի շուտ քան այցի սկիզբը</string>
+    <string name="health_issue_start_can_not_be_with_future_date">Դեպքի սկիզբը չի կարող լինել ապագա ամսաթվով</string>
+    <string name="visit_added_successfully">Այցը Հաջողությամբ ավելացվել է</string>
+    <string name="add_visit">Ավելացնել այց</string>
+
+    <!-- Visit Mode -->
+    <string-array name="visit_modes_list">
+        <item>Տնային այց</item>
+        <item>Ամբուլատոր այց</item>
+        <item>Հիվանդանոցային այց</item>
+        <item>Ցերեկային ստացիոնար</item>
+        <item>Տնային ստացիոնար</item>
+        <item>Հեռաբժշկություն</item>
+        <item>Կցագրման փոփոխություն</item>
+        <item>Շտապ օգնության կանչ</item>
+    </string-array>
+
+    <!-- Visit Type -->
+    <string-array name="visit_types_list">
+        <item>Անձնական ներկայություն</item>
+        <item>Հեռախոսազանգ</item>
+        <item>Հեռահար կոնսուլտացիա</item>
+        <item>Հեռաբժշկություն</item>
+        <item>Տնային այց</item>
+    </string-array>
+
+    <!-- Reason of the Visit -->
+    <string-array name="reasons_of_the_visit_list">
+        <item>Հիվանդություն</item>
+        <item>Վերահսկողական</item>
+        <item>Վարչական</item>
+        <item>Կանխարգելիչ</item>
+        <item>Վերարտադրողական</item>
+        <item>Այլ</item>
+        <item>Խորհրդատվական այց</item>
+        <item>Հերթական այց</item>
+        <item>Ցավային համախտանիշ</item>
+        <item>Գեղագիտական</item>
+        <item>Ֆունկցիոնալ</item>
+        <item>Շուրջօրյա հսկողություն պահանջող</item>
+        <item>Շուրջօրյա հսկողություն չպահանջող</item>
+        <item>Ցերեկային ստացիոնար</item>
+        <item>Փորձաքննություն</item>
+    </string-array>
+
+    <!-- Source of Financing -->
+    <string-array name="sources_of_financing_list">
+        <item>Պետպատվեր</item>
+        <item>Ապահովագրություն(Սոց. Փաթեթ)</item>
+        <item>Վճարովի</item>
+        <item>Ապահովագրություն</item>
+    </string-array>
+
+    <!-- Health Issue Type Values -->
+    <string-array name="health_issue_types_list">
+        <item>Uիստեմատիկ ստուգումներ</item>
+        <item>Վերահսկողական</item>
+        <item>Վարչական</item>
+        <item>Կանխարգելիչ</item>
+        <item>Վերարտադրողական</item>
+        <item>Ախտանշան</item>
+        <item>Կոդավորված ախտանշան</item>
+        <item>Ախտանիշի ճշգրտում</item>
+        <item>Նախնական ախտորաշում</item>
+        <item>Վերջնական ախտորոշում</item>
+        <item>Ճշգրտված ախտորոշում</item>
+        <item>Կոդավորված կողմնակի ազդեցություն</item>
+        <item>Կողմնակի ազդեցություն</item>
+        <item>Կոդավորված ալերգիա</item>
+        <item>Ալերգիա</item>
+    </string-array>
+
+    <!-- Health Issue Type Keys -->
+    <string-array name="health_issue_types_keys_list">
+        <item>regular_checkup</item>
+        <item>control_case</item>
+        <item>administrative_case</item>
+        <item>preventive_case</item>
+        <item>reproductive_case</item>
+        <item>symptom</item>
+        <item>coded_symptom</item>
+        <item>symptom_correction</item>
+        <item>preliminary</item>
+        <item>final</item>
+        <item>correction</item>
+        <item>coded_adverse_reaction</item>
+        <item>adverse reaction</item>
+        <item>coded_allergy</item>
+        <item>allergy</item>
+    </string-array>
+
+    <!-- Health Issue Case Type Values -->
+    <string-array name="health_issue_case_types_list">
+        <item>Ամբուլատոր</item>
+        <item>Հիվանդանոցային </item>
+        <item>Ստոմատոլոգիա</item>
+        <item>Հղիի հսկում</item>
+        <item>Կցագրում</item>
+        <item>Շտապ օգնության կանչ</item>
+    </string-array>
+
+</resources>

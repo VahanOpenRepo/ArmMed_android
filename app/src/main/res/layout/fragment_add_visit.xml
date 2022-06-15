@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/role_uuid"
+                style="@style/MaterialInputStyleExposedDropdown"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="20dp"
+                android:hint="@string/medical_institution"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/role_uuid_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/patient_social_card"
+                style="@style/MaterialInputStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/patient_social_card"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/role_uuid">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/patient_social_card_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/patient_mobile_number"
+                style="@style/MaterialInputStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/patient_mobile_number"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_social_card">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/visit_start_tv"
+                style="@style/TextView.BlackLight.Regular.Size16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="18dp"
+                android:text="@string/visit_start"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_mobile_number" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/visit_start_date_tv"
+                style="@style/MaterialInputStyle"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/date"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toStartOf="@id/visit_start_time_tv"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/visit_start_tv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/visit_start_date_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/visit_start_date_tv_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/visit_start_date_tv"
+                app:layout_constraintEnd_toEndOf="@id/visit_start_date_tv"
+                app:layout_constraintStart_toStartOf="@id/visit_start_date_tv"
+                app:layout_constraintTop_toTopOf="@id/visit_start_date_tv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/visit_start_time_tv"
+                style="@style/MaterialInputStyle"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:hint="@string/time"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintBottom_toBottomOf="@id/visit_start_date_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/visit_start_date_tv"
+                app:layout_constraintTop_toTopOf="@id/visit_start_date_tv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/visit_start_time_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/visit_start_time_tv_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/visit_start_time_tv"
+                app:layout_constraintEnd_toEndOf="@id/visit_start_time_tv"
+                app:layout_constraintStart_toStartOf="@id/visit_start_time_tv"
+                app:layout_constraintTop_toTopOf="@id/visit_start_time_tv" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/visit_end_tv"
+                style="@style/TextView.BlackLight.Regular.Size16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="18dp"
+                android:text="@string/visit_end"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/visit_start_date_tv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/visit_end_date_tv"
+                style="@style/MaterialInputStyle"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/date"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toStartOf="@id/visit_end_time_tv"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/visit_end_tv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/visit_end_date_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/visit_end_date_tv_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/visit_end_date_tv"
+                app:layout_constraintEnd_toEndOf="@id/visit_end_date_tv"
+                app:layout_constraintStart_toStartOf="@id/visit_end_date_tv"
+                app:layout_constraintTop_toTopOf="@id/visit_end_date_tv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/visit_end_time_tv"
+                style="@style/MaterialInputStyle"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:hint="@string/time"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintBottom_toBottomOf="@id/visit_end_date_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/visit_end_date_tv"
+                app:layout_constraintTop_toTopOf="@id/visit_end_date_tv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/visit_end_time_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/visit_end_time_tv_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/visit_end_time_tv"
+                app:layout_constraintEnd_toEndOf="@id/visit_end_time_tv"
+                app:layout_constraintStart_toStartOf="@id/visit_end_time_tv"
+                app:layout_constraintTop_toTopOf="@id/visit_end_time_tv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/visit_mode"
+                style="@style/MaterialInputStyleExposedDropdown"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/visit_mode"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/visit_end_date_tv">
+
+                <AutoCompleteTextView
+                    android:id="@+id/visit_mode_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/visit_type"
+                style="@style/MaterialInputStyleExposedDropdown"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/visit_type"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/visit_mode">
+
+                <AutoCompleteTextView
+                    android:id="@+id/visit_type_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reason_of_the_visit"
+                style="@style/MaterialInputStyleExposedDropdown"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/reason_of_the_visit"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/visit_type">
+
+                <AutoCompleteTextView
+                    android:id="@+id/reason_of_the_visit_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/source_of_financing"
+                style="@style/MaterialInputStyleExposedDropdown"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/source_of_financing"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reason_of_the_visit">
+
+                <AutoCompleteTextView
+                    android:id="@+id/source_of_financing_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/health_issue_type"
+                style="@style/MaterialInputStyleExposedDropdown"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/issue_type"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/source_of_financing">
+
+                <AutoCompleteTextView
+                    android:id="@+id/health_issue_type_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/health_issue_case_type"
+                style="@style/MaterialInputStyleExposedDropdown"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/issue_case_type"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/health_issue_type">
+
+                <AutoCompleteTextView
+                    android:id="@+id/health_issue_case_type_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/health_issue_start_tv"
+                style="@style/TextView.BlackLight.Regular.Size16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="18dp"
+                android:text="@string/health_issue_start"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/health_issue_case_type" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/health_issue_start_date_tv"
+                style="@style/MaterialInputStyle"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/date"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toStartOf="@id/visit_end_time_tv"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/health_issue_start_tv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/health_issue_start_date_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/health_issue_start_date_tv_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/health_issue_start_date_tv"
+                app:layout_constraintEnd_toEndOf="@id/health_issue_start_date_tv"
+                app:layout_constraintStart_toStartOf="@id/health_issue_start_date_tv"
+                app:layout_constraintTop_toTopOf="@id/health_issue_start_date_tv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/health_issue_start_time_tv"
+                style="@style/MaterialInputStyle"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:hint="@string/time"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintBottom_toBottomOf="@id/health_issue_start_date_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/health_issue_start_date_tv"
+                app:layout_constraintTop_toTopOf="@id/health_issue_start_date_tv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/health_issue_start_time_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/health_issue_start_time_tv_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/health_issue_start_time_tv"
+                app:layout_constraintEnd_toEndOf="@id/health_issue_start_time_tv"
+                app:layout_constraintStart_toStartOf="@id/health_issue_start_time_tv"
+                app:layout_constraintTop_toTopOf="@id/health_issue_start_time_tv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/health_issue_case_number"
+                style="@style/MaterialInputStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/health_issue_case_number"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/health_issue_start_date_tv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/patient_name"
+                style="@style/MaterialInputStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/patient_name"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/health_issue_case_number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/patient_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/patient_surname"
+                style="@style/MaterialInputStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:hint="@string/patient_surname"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/patient_surname_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/patient_email"
+                style="@style/MaterialInputStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/standard_margin_16"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/patient_email"
+                android:theme="@style/MaterialInputTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_surname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/patient_email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/add_visit_btn"
+                style="@style/pink_blue_gradient_filled_big_button_style"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="42dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/add_visit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/patient_email" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notifications"
+    app:startDestination="@id/notifications_fragment">
+
+    <fragment
+        tools:layout="@layout/fragment_notifications"
+        android:id="@+id/notifications_fragment"
+        android:name="com.armed.am.notifications.FragmentNotifications"
+        android:label="Empty" />
+
+
+</navigation>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/profile_image"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_container" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameSureName"
+        style="@style/TextView.Primary.SemiBold.Size17"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_container"
+        tools:text="Աննա Ստեփանյան" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/last_update"
+        style="@style/TextView.White.Regular.Size10"
+        android:layout_marginTop="10dp"
+        android:text="@string/last_update"
+        android:textColor="#80322644"
+        app:layout_constraintStart_toStartOf="@id/nameSureName"
+        app:layout_constraintTop_toBottomOf="@id/nameSureName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/visit_time"
+        style="@style/TextView.Primary.Regular.Size15"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/ic_clock"
+        android:drawablePadding="9dp"
+        app:layout_constraintStart_toStartOf="@id/last_update"
+        app:layout_constraintTop_toBottomOf="@id/last_update"
+        tools:text="14:00 - 18:00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/visit_date"
+        style="@style/TextView.Primary.Regular.Size15"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="9dp"
+        app:layout_constraintStart_toStartOf="@id/visit_time"
+        app:layout_constraintTop_toBottomOf="@id/visit_time"
+        tools:text="21.08.2021" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CustomCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/standard_margin_16"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="@dimen/standard_margin_16"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_survey_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/visit_date">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/standard_margin_16"
+            android:paddingTop="27dp"
+            android:paddingBottom="19dp"
+            android:paddingEnd="@dimen/standard_margin_16"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollIndicators="end"
+            android:fadeScrollbars="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/birthday_title_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:text="@string/birthday_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/birthday_date_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/birthday_date_body"
+                    tools:text="17.02.1997" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/phone_number_title_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/phone_number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/birthday_date_body" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/phone_number_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/phone_number_title_tv"
+                    tools:text="099 999 999" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/email_title_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/phone_number_body" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/email_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/email_title_tv"
+                    tools:text="abc@gmail.com" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/social_card_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/social_card"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email_body" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/social_card_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/social_card_tv"
+                    tools:text="2640775439" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/passport_title_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/passport"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/social_card_body" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/passport_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/passport_title_tv"
+                    tools:text="AM0775439" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/address_title_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/passport_body" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/address_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/address_title_tv"
+                    tools:text="3 Արարատ Հովտաlfdfnlfslnfslnffnfsf slfnsflnlsfnlsfnfslnfllsnflsfn" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/social_group_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/social_group"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/address_body" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/social_group_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/social_group_tv"
+                    tools:text="3 Արարատ Հովտաlfdfnlfslnfsdvbsvsvkfksgksfgkfkavdskvfslnffnfsf slfnsflnlsfnlsfnfslnfllsnflsfn" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/case_type_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/case_type"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/social_group_body" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/case_type_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/case_type_tv"
+                    tools:text="3 Արարատ Հովտաlfdfnlfslnfsdvbsvsvkfksgksfgkfkavdskvfslnffnfsf slfnsflnlsfnlsfnfslnfllsnflsfn" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/diagnose_tv"
+                    style="@style/TextView.PrimaryAlfa50.Regular.Size15"
+                    android:layout_marginStart="18sp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/diagnose"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/case_type_body" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/diagnose_body"
+                    style="@style/TextView.Primary.Regular.Size15"
+                    android:layout_width="0dp"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@id/diagnose_tv"
+                    tools:text="3 Արարատ Հովտաlfdfnlfslnfsdvbsvsvkfksgksfgkfkavdskvfslnffnfsf slfnsflnlsfnlsfnfslnfllsnflsfn" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/start_survey_btn"
+        style="@style/pink_blue_gradient_filled_big_button_style"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
